@@ -1,0 +1,536 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap');
+
+
+/* Main Styles*/
+:root {
+    --blue-color: #6285FB;
+    --lighter-blue-color: #6285FB99;
+    --red-color: #E5524F;
+    --yellow-color: #FFC256;
+    --white-color: #FFFFFF;
+    --lighter-gray-color: #F4F4F4D6; /* Main */
+    --light-gray-color: #EDEEF0; /* Inputs */
+    --black-color: #000000;
+    --gray-color: #555;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrapper {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+/*Header*/
+header {
+    padding: 30px 0;
+    background-color: var(--light-gray-color);
+    width: 100%;
+}
+
+header .logo {
+    margin-left: 20px;
+}
+
+header .logo,
+footer .blocks .logo {
+    text-transform: uppercase;
+    font-size: 29px;
+    font-weight: 800;
+}
+
+header nav {
+    float: right;
+    width: 40%;
+    margin-right: 20px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+    position: relative;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    color: var(--black-color);
+}
+
+
+header nav ul li:not(.btn) a:hover {
+    border-bottom: 5px solid var(--blue-color);
+}
+
+header nav ul li.btn a,
+.email .block button {
+    background: var(--blue-color);
+    padding: 9px 17px;
+    border-radius: 5px;
+}
+
+header nav ul li.btn a:hover,
+.email .block button:hover {
+    background: var(--lighter-blue-color);
+}
+
+
+/* Above section on the home page */
+.hero {
+    padding-bottom: 150px;
+    position: relative;
+}
+
+.hero--info {
+    width: 530px;
+    padding-top: 70px;
+}
+
+.hero--info h2 {
+    color: var(--blue-color);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.hero--info h1 {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.hero--info p {
+    font-weight: 500;
+    line-height: 170%;
+    margin: 30px 0;
+}
+
+.hero--info .btn {
+    background: var(--blue-color);
+    color: var(--white-color);
+    border-radius: 50px;
+    padding: 15px 30px;
+    border: 0;
+    transition: all 500ms ease;
+    font-size: 17px;
+}
+
+.hero--info .btn:hover {
+    cursor: pointer;
+    background-color: var(--lighter-blue-color);
+}
+
+.hero img {
+    position: absolute;
+    top: 20px;
+    right: 0;
+}
+
+
+/* Cards Section */
+.cards-container {
+    padding-top: 50px;
+
+}
+
+.cards-container h3 {
+    font-weight: 600;
+    font-size: 31px;
+}
+
+.cards-container {
+    border-radius: 5px;
+    padding: 12px 23px;
+    float: right;
+    display: block;
+}
+
+
+.cards-container .cards {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    padding: 50px 0;
+}
+
+.cards-container .cards span {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cards-container .cards span img {
+    position: relative;
+    top: 5px;
+    margin-right: 7px;
+}
+
+.big-text {
+    padding: 50px 0;
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    width: 800px;
+}
+
+/* Below part on the home page - email  */
+.email {
+    padding-bottom: 20px;
+    padding-top: 50px;
+}
+
+.email h3 {
+    margin-top: 60px;
+    font-size: 30px;
+}
+
+.email .block {
+    margin-top: 30px;
+    border-radius: 10px;
+    padding: 40px 3%;
+    width: 94%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.email .block h4 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.email .block p {
+    width: 500px;
+}
+
+.email .block input {
+    background: var(--light-gray-color);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    width: 380px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    position: relative;
+    right: -95px;
+    padding: 20px 120px 20px 30px;
+}
+
+.email .block input::placeholder {
+    color: var(--gray-color);
+}
+
+.email .block button {
+    cursor: pointer;
+    border: 0;
+    padding: 17px 20px;
+    position: relative;
+    color: var(--white-color);
+    right: 7px;
+}
+
+/* All containers that contain website forms are named feedback */
+.feedback {
+    padding: 70px 0;
+
+}
+
+.feedback h2 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.feedback p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.feedback form {
+    margin: 80px auto;
+    width: 600px;
+}
+
+.feedback form .inline {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feedback form .inline > div {
+    width: 50%;
+}
+
+.feedback form label {
+    color: var(--black-color);
+    font-size: 14px;
+}
+
+.feedback form input {
+    background: var(--light-gray-color);
+    border-radius: 10px;
+    border: 1px solid var(--blue-color);
+    display: block;
+    width: 90%;
+    padding: 15px 10px;
+    outline: none;
+    color: var(--black-color);
+    margin-top: 7px;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.feedback form .one-line {
+    width: 96%;
+}
+
+.feedback form button {
+    background: var(--blue-color);
+    border-radius: 5px;
+    border: 0;
+    float: right;
+    cursor: pointer;
+    color: var(--white-color);
+    padding: 15px 35px;
+    transition: all 500ms ease;
+}
+
+.feedback form .delete-button {
+    background: var(--red-color);
+    border-radius: 5px;
+    border: 0;
+    float: right;
+    cursor: pointer;
+    color: var(--white-color);
+    padding: 10px 30px;
+    transition: all 500ms ease;
+}
+
+.feedback form .logout-button {
+    background: var(--gray-color);
+    border-radius: 5px;
+    border: 0;
+    float: left;
+    cursor: pointer;
+    color: var(--white-color);
+    padding: 10px 30px;
+    transition: all 500ms ease;
+}
+
+
+.feedback form button:hover {
+    background: var(--lighter-blue-color);
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    padding: 50px 0;
+    background-color: var(--light-gray-color);
+}
+
+footer .blocks {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .blocks p {
+    width: 300px;
+    margin: 15px 0;
+}
+
+footer .blocks h4 {
+    font-weight: 500;
+    font-size: 17px;
+}
+
+footer .blocks ul {
+    list-style: none;
+}
+
+footer .blocks ul li {
+    margin-top: 7px;
+    opacity: 0.8;
+}
+
+footer hr {
+    margin: 30px 0;
+    border: 0;
+    height: 1px;
+    background: #ccc;
+}
+
+footer > p {
+    text-align: center;
+}
+
+
+/* Task Manager page */
+.task-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 100%;
+}
+
+.main {
+    width: 80%;
+    background-color: var(--lighter-gray-color);
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.title {
+    margin-left: 10px;
+    color: var(--yellow-color);
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.row {
+    position: relative;
+    background: var(--light-gray-color);
+    border-radius: 30px;
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.row input {
+    position: absolute;
+    border: none;
+    outline: none;
+    background: var(--light-gray-color);
+    font-weight: bold;
+    font-size: 17px;
+    border-radius: 30px;
+    width: 90%;
+    color: var(--blue-color);
+    padding: 15px;
+}
+
+.row button {
+    right: 0;
+    position: absolute;
+    border: none;
+    outline: none;
+    padding: 15px 50px;
+    background: var(--blue-color);
+    color: var(--white-color);
+    font-size: 16px;
+    cursor: pointer; /* Меняет курсор мыши */
+    border-radius: 40px;
+}
+
+.row button:active {
+    background: var(--light-gray-color);
+    color: var(--blue-color);
+}
+
+.main ul li {
+    list-style: none; /* Убирает нумерацию */
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    -webkit-user-select: none; /* Чтобы работало в Safari */
+    position: relative; /* Располагается по умолчанию но может быть смещен используя (right, left, top...)*/
+}
+
+.main ul li::before {
+    content: '';
+    position: absolute; /* Располагается относительно родителя со свойством relative */
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-image: url('/img/black-unchecked-circle.jpeg');
+    background-size: cover;
+    background-position: center;
+    top: 14px;
+    left: 25px;
+}
+
+.main ul li.checked {
+    color: var(--black-color);
+    text-decoration: line-through;
+}
+
+.main ul li.checked::before {
+    color: var(--black-color);
+    text-decoration: line-through;
+    background-image: url('/img/blue-checked-circle.png');
+}
+
+.main ul li .remove-button {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: var(--red-color);
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.main ul li .edit-button {
+    position: absolute;
+    right: 30px;
+    top: 4px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: var(--gray-color);
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.edit-button:hover {
+    background: var(--light-gray-color);
+}
+
+.remove-button:hover {
+    background: var(--light-gray-color);
+}
+
+.edit-input {
+    border: none;
+    outline: none;
+    color: var(--blue-color);
+    position: absolute;
+    top: 15px;
+    left: 50px;
+    font-size: 17px;
+    font-weight: bold;
+    background-color: var(--lighter-gray-color);
+}
+
+
+
+
